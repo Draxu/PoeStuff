@@ -43,7 +43,7 @@ public class Run {
 		try {
 			Robot roboto = new Robot();
 			globColor = roboto.getPixelColor(globPosArray[0],globPosArray[1]);
-			roboto.mouseMove(globPosArray[1], globPosArray[0]);
+			roboto.mouseMove(globPosArray[0], globPosArray[1]);
 		} catch (AWTException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -141,8 +141,8 @@ public class Run {
 		lblBlue.setText(c.getBlue()+ "");
 	}
 	
-	public static Timer programFPS(double fps){
-		Timer timer = new Timer(1000/20,new ActionListener(){
+	public static Timer programFPS(int fps){
+		Timer timer = new Timer(1000/fps,new ActionListener(){
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -177,8 +177,8 @@ public class Run {
 	private static void CalcGlobePosition(){
 		int globPosH = (int) Math.floor((screenHeight * 0.79) * 1.15);
 		int globPosW = (int) Math.floor((screenWidth * 0.11) / 2);
-		globPosArray[0] = globPosH;
-		globPosArray[1] = globPosW;
+		globPosArray[0] = globPosW;
+		globPosArray[1] = globPosH;
 		
 	}
 	
