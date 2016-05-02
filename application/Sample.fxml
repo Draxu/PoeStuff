@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#KeyPressTest" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CTRL.TimerController">
+   <children>
+      <Canvas fx:id="myCanvas" height="400.0" visible="true" width="600.0" />
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="lblX" layoutX="107.0" layoutY="26.0" text="x" />
+       		
+        
+            <Label fx:id="lblY" layoutX="171.0" layoutY="26.0" text="Y" />
+            <Button id="StopTimer" layoutX="107.0" layoutY="349.0" mnemonicParsing="false" onAction="#btnStopTimer" text="Stop" />
+            <Label layoutX="29.0" layoutY="26.0" text="Mouse Pos" />
+            <Button id="StartTimer" layoutX="38.0" layoutY="349.0" mnemonicParsing="false" onAction="#btnStartTimer" text="Start" />
+            <ChoiceBox fx:id="ddlGlobeType" layoutX="28.0" layoutY="90.0" prefHeight="25.0" prefWidth="185.0" />
+            <ChoiceBox fx:id="ddlAlertAt" layoutX="30.0" layoutY="185.0" prefWidth="150.0" />
+            <Label layoutX="28.0" layoutY="65.0" text="Choose a GlobeType" />
+            <Label layoutX="33.0" layoutY="162.0" text="Choose Alert At (%)" />
+            <ColorPicker fx:id="colorPicker" layoutX="34.0" layoutY="250.0" prefHeight="25.0" prefWidth="150.0" />
+            <MenuBar layoutX="468.0" layoutY="2.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <CheckBox layoutX="233.0" layoutY="94.0" mnemonicParsing="false" text="Golem" />
+            <Label layoutX="40.0" layoutY="222.0" text="BorderColor" />
+            <Label layoutX="242.0" layoutY="26.0" text="Color" />
+            <Label fx:id="lblColor" layoutX="290.0" layoutY="26.0" text="Label" />
+            <Button fx:id="add" layoutX="204.0" layoutY="250.0" mnemonicParsing="false" onAction="#StoreValue" text="Add" />
+            <ListView fx:id="ListView" layoutX="261.0" layoutY="144.0" prefHeight="132.0" prefWidth="324.0" />
+            <Label layoutX="395.0" layoutY="127.0" text="GlobeType" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
